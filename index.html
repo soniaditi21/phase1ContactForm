@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="root">
+        <form onsubmit="return validateForm()">
+            <table>
+                <tr class="row">
+                    <td><label for="first_name" class="label">First Name</label></td>
+                    <td>
+                        <input type="text" name="first_name" id="first_name" class="inputField"><br>
+                        <p id="errorInFirstName" class="error"></p>
+                    </td>
+                </tr>
+
+
+                <tr class="row">
+                    <td><label for="last_name" class="label">Last Name</label></td>
+                    <td>
+                        <input type="text" name="last_name" id="last_name" class="inputField"><br>
+                        <p id="errorInLastName" class="error"></p>
+                    </td>  
+                </tr>
+
+
+                <tr style="margin: 1%">
+                    <td><Gender for="gender" class="label">Gender</label></td>
+                    
+                        <td class="radioButtonContainer">
+                           
+                            
+                            <input type="radio" name="gender_male" id="gender_male" class="radioButton">
+                            <label for="gender_male" class="label">Male</label>
+
+                           
+                            <input type="radio" name="gender_female" id="gender_female">
+                            <label for="gender_female" class="label">Female</label>
+                            <br>
+                            <p id="genderNotSpecified" class="error"></p>
+                        </td>
+                </tr>
+
+
+                <tr class="martailStatusRow">
+                    <td><label for="martial_status" class="label">Martial Status</label></td>
+                    
+                        <td class="radioButtonContainer">
+                           
+                            <input type="radio" name="married" id="married" class="radioButton" onclick="marriedClicked()">
+                            <label for="married" class="label">Married</label>
+
+                           
+                            <input type="radio" name="unmarried" id="unmarried">
+                            <label for="unmarried" class="label">Unmarried</label><br>
+                            <p id="martailStatusNotSpecified" class="error"></p>
+
+                        </td>
+                </tr>
+
+
+
+                <tr class="row">
+                    <td><label for="spouse_name" class="label">Spouse Name</label></td>
+                    <td><input type="text" name="spouse_name" id="spouse_name" class="inputField"readonly><br>
+                        <p id="spouseNameError" class="error"></p>
+                    </td>
+                </tr>
+
+                <tr class="row">
+                    <td><label for="other_details" class="label">Other details</label></td>
+                    <td><input type="text" name="other_details" id="other_details" class="inputField"></td>
+                </tr>
+
+
+            </table>
+            
+            
+               <div>
+                   <input type="checkbox" name="termNco" id="termsNconditions">
+                   <label for="termNco" class="label"> I accept <a href="/termsandcondition">Terms & condition</a></label>
+                   <p id="termsNconditionError" class="error"></p>
+              </div>
+
+          <div class="buttonContainer">
+          
+            <button type="reset" value="Reset">Reset</button>
+            <button type="submit" value="Submit">Submit</button>
+        </div>   
+
+            
+                
+        </form>
+
+        <div class="rightPanel">
+          <h1 id="rightPanelText">Please Enter Your Details</h1>
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>
