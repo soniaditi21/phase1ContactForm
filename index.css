@@ -1,32 +1,34 @@
 body{
-    background: #C04848;  /* fallback for old browsers */
+  background: #C04848;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color:#dfb3b3;
   font-size: 2rem;
-  
+  overflow: scroll;
   }
   .root {
-      background-color: #dfb3b3;
+      background-color: #dfb3b332;
       margin: 5%;
       border-radius: 10px;
       display: flex;
+      overflow: scroll;
   }
   form {
-      padding: 2%;
+      padding: 5% 2%;
       font-size: 1rem;
       border-radius: 10px;
       font-family: "proxima-nova-soft", sans-serif;
-      width: 50%;
-      margin:7%;
+      width: 70%;
+      margin: 1% 3% 3% 3%;
+      overflow: scroll;
       background: #C04848;  /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       box-shadow: rgba(70, 39, 39, 0.618) 0px 3px 6px, rgba(101, 59, 59, 0.622) 0px 3px 6px;
-  
   }
   .rightPanel{
-    padding-top: 4%;
+    padding: 1%;
+    text-align: center;
   }
   table {
     width: 100%;
@@ -36,16 +38,19 @@ body{
     margin: 5%;
   }
   #rightPanelText {
-    color:#480048;
+    color: #f6e5e5;
+    font-size: 50px;
+    margin-top: 4%;
   }
   input {
-      padding: 3%;
+    padding: 3%;
     border: solid gray 1px;
     border-radius: 3px;
     margin: 1%;
     color:rgb(221, 200, 211);
     font-size: 15px;
   }
+  
   .inputField{
     width: 100%;
     margin-top: 2% ;

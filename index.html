@@ -3,19 +3,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Foundation-Phase 1">
+    <meta name="author" content="Aditi Soni">
+
     <title>Login Form</title>
 
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="root">
-        <form onsubmit="return validateForm()">
+        <fieldset class="root">
+        <legend id="rightPanelText">Please enter your details</legend>
+        <form onsubmit="return validateForm()" action="./thankyou.html">
             <table>
                 <tr class="row">
                     <td><label for="first_name" class="label">First Name</label></td>
                     <td>
-                        <input type="text" name="first_name" id="first_name" class="inputField"><br>
+                        <input type="text" name="first_name" id="first_name" class="inputField" pattern="[A-Za-z]{2,}" title="Two or more letters required, only characters, no space" required focus><br>
                         <p id="errorInFirstName" class="error"></p>
                     </td>
                 </tr>
@@ -24,7 +28,7 @@
                 <tr class="row">
                     <td><label for="last_name" class="label">Last Name</label></td>
                     <td>
-                        <input type="text" name="last_name" id="last_name" class="inputField"><br>
+                        <input type="text" name="last_name" id="last_name" class="inputField" pattern="[A-Za-z]{2,}" title="Two or more letters required, only characters, no space" required><br>
                         <p id="errorInLastName" class="error"></p>
                     </td>  
                 </tr>
@@ -36,11 +40,11 @@
                         <td class="radioButtonContainer">
                            
                             
-                            <input type="radio" name="gender_male" id="gender_male" class="radioButton">
+                            <input type="radio" name="gender" id="gender_male" class="radioButton" value="yes" required>
                             <label for="gender_male" class="label">Male</label>
 
                            
-                            <input type="radio" name="gender_female" id="gender_female">
+                            <input type="radio" name="gender" id="gender_female" value="no" required>
                             <label for="gender_female" class="label">Female</label>
                             <br>
                             <p id="genderNotSpecified" class="error"></p>
@@ -53,11 +57,11 @@
                     
                         <td class="radioButtonContainer">
                            
-                            <input type="radio" name="married" id="married" class="radioButton" onclick="marriedClicked()">
+                            <input type="radio" name="married" id="married" class="radioButton" value="yes" onclick="marriedClicked()" required>
                             <label for="married" class="label">Married</label>
 
                            
-                            <input type="radio" name="unmarried" id="unmarried">
+                            <input type="radio" name="married" id="unmarried" value="no" required>
                             <label for="unmarried" class="label">Unmarried</label><br>
                             <p id="martailStatusNotSpecified" class="error"></p>
 
@@ -68,14 +72,14 @@
 
                 <tr class="row">
                     <td><label for="spouse_name" class="label">Spouse Name</label></td>
-                    <td><input type="text" name="spouse_name" id="spouse_name" class="inputField"readonly><br>
+                    <td><input type="text" name="spouse_name" id="spouse_name" class="inputField" pattern="[A-Za-z]{2,}" title="Two or more letters required, only characters, no space" readonly required><br>
                         <p id="spouseNameError" class="error"></p>
                     </td>
                 </tr>
 
                 <tr class="row">
                     <td><label for="other_details" class="label">Other details</label></td>
-                    <td><input type="text" name="other_details" id="other_details" class="inputField"></td>
+                    <td><textarea id="other_details" class="inputField" maxlength="100" rows="5" cols="33"></textarea></td>
                 </tr>
 
 
@@ -83,7 +87,7 @@
             
             
                <div>
-                   <input type="checkbox" name="termNco" id="termsNconditions">
+                   <input type="checkbox" name="termNco" id="termsNconditions" required>
                    <label for="termNco" class="label"> I accept <a href="/termsandcondition">Terms & condition</a></label>
                    <p id="termsNconditionError" class="error"></p>
               </div>
@@ -97,11 +101,9 @@
             
                 
         </form>
-
-        <div class="rightPanel">
-          <h1 id="rightPanelText">Please Enter Your Details</h1>
-        </div>
-    </div>
+    </fieldset>
+       
+   
 
     <script src="/index.js"></script>
 </body>
